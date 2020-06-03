@@ -1,18 +1,26 @@
 # Private Forum Plugin for NodeBB
-*A nodebb-plugin-quickstart clone for now*
 
-A starter kit for quickly creating NodeBB plugins. Comes with a pre-setup LESS file, server side JS script with an `action:app.load` hook, and a client-side script. Most plugins need at least one of the above, so this ought to save you some time. For a full list of hooks have a look at our [wiki page](https://github.com/NodeBB/NodeBB/wiki/Hooks), and for more information about creating plugins please visit our [documentation portal](https://docs.nodebb.org/).
+This module allows to lock the forum to anyone that did not have an account.
 
-Fork this or copy it, and using your favourite text editor find and replace all instances of `nodebb-plugin-quickstart` with `nodebb-plugin-your-plugins-name`. Change the author's name in the LICENSE and package.json files.
+Be aware:
+- No pages will be publicly accessible
+- Web crawlers and bots (like google) will not be able to index the forum (except the login and register page)
 
-## Hello World
+## Bug or feature request
+Please open an issue or a pull request if needed.
 
-Really simple, just edit `static/lib/main.js` and paste in `console.log('hello world');`, and that's it!
+## Roadmap
+- Implement an admin view to add and remove exception pages
 
 ## Installation
 
-    npm install nodebb-plugin-quickstart
+Via npm:
+
+```
+npm install nodebb-plugin-private-forum
+```
+
+Or via the NodeBB plugin page.
 
 ## Screenshots
-
-Don't forget to add screenshots!
+For now there is no web view, only debug messages if nodebb is started with `./nodebb dev`.
