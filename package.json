@@ -1,51 +1,25 @@
 {
-  "name": "nodebb-plugin-quickstart",
-  "version": "0.3.1",
-  "description": "A starter kit for quickly creating NodeBB plugins",
+  "name": "nodebb-plugin-private-forum",
+  "version": "0.1.1",
+  "description": "A module to lock the forum to registered members only",
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psychobunny/nodebb-plugin-quickstart"
+    "url": "https://github.com/LM1LC3N7/nodebb-plugin-private-forum"
   },
   "keywords": [
     "nodebb",
     "plugin",
-    "quickstart",
-    "shell"
+    "lock",
+    "private"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
   "author": {
-    "name": "psychobunny",
-    "email": "psycho.bunny@hotmail.com"
+    "name": "Louis MILCENT",
+    "email": "14235706+LM1LC3N7@users.noreply.github.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/psychobunny/nodebb-plugin-quickstart/issues"
+    "url": "https://github.com/LM1LC3N7/nodebb-plugin-private-forum/issues"
   },
-  "readmeFilename": "README.md",
-  "nbbpm": {
-    "compatibility": "^1.0.0"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^8.0.0",
-    "@commitlint/config-angular": "^7.1.2",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "husky": "^2.4.0"
-  },
-  "dependencies": {
-    "eslint": "^6.8.0",
-    "lint-staged": "^10.0.9"
-  }
+  "readmeFilename": "README.md"
 }
