@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/LM1LC3N7/nodebb-plugin-private-forum/issues"
   },
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "nbbpm": {
+    "compatibility": "^1.11.2"
+  }
 }
