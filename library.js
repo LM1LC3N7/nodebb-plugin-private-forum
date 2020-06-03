@@ -21,10 +21,10 @@ plugin.init = function (params, callback) {
 	app.use(function (req, res, next) {
 		// if ((allowedPages.indexOf(req.url) > 0) || (assetsPages.test(req.url)) || (req.uid === 0)) {
 		if ((allowedPages.test(req.url)) || (req.uid !== 0)) {
-			console.log("nodebb-plugin-private-forum:DEBUG: user is logged and / or URL = "+ req.url +", no redirect.");
+			winston.verbose("[plugin-nodebb-private-forum] User is logged or URL is allowed ("+ req.url +"), no redirect.");
 			next();
 		} else {
-			console.log("nodebb-plugin-private-forum:DEBUG: User is not logged and URL = "+ req.url +", redirecting to login page.");
+			winston.verbose("[plugin-nodebb-private-forum] User is not logged and URL is not allowed ("+ req.url +"), redirecting to login page.");
 			helpers.notAllowed(req, res, next);
 		}
 	});
