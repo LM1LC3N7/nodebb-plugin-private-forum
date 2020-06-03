@@ -1,0 +1,9 @@
+{
+  "id": "nodebb-plugin-quickstart",
+  "url": "https://github.com/LM1LC3N7/nodebb-plugin-quickstart",
+  "library": "./library.js",
+  "hooks": [{
+    "hook": "static:app.load",
+    "method": "init"
+  }]
+}
