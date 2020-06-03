@@ -4,15 +4,16 @@ const plugin = {};
 
 // WE NEED A MIDDLEWARE HERE
 //
-plugin.init = function (app, params, callback) {
+plugin.addMiddleware = function (req, res, next) {
+	
 	var helpers = require.main.require('./src/routes/helpers');
-	var req = app.req;	
+	
 	if ((req.url !== "/login") || (req.url !== "/register")) {
 		helpers.notAllowed(app.req, app.res, function(error){
 			if (error) return next(err);
 		});
 	}
-	callback();
+	next();
 };
 
 module.exports = plugin;
