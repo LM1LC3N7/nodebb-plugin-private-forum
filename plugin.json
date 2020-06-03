@@ -3,7 +3,6 @@
   "url": "https://github.com/LM1LC3N7/nodebb-plugin-private-forum",
   "library": "./library.js",
   "hooks": [{
-    "hook": "static:app.load",
-    "method": "init"
+    "hook": "static:app.load", "method": "init"
   }]
 }

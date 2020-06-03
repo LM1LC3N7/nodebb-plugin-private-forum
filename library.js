@@ -1,19 +1,28 @@
 'use strict';
 
 const plugin = {};
+var winston = module.parent.require('winston');
+const helpers = require.main.require('./src/controllers/helpers');
 
-// WE NEED A MIDDLEWARE HERE
-//
-plugin.addMiddleware = function (req, res, next) {
+plugin.init = function (params, callback) {
 	
-	var helpers = require.main.require('./src/routes/helpers');
+	// TODO
+	// ADD A MIDDLEWARE AND GET "req" object
+
+	const { app, middleware, router } = params;
+	var allowedPages=["/login", "/register", "/reset"];
 	
-	if ((req.url !== "/login") || (req.url !== "/register")) {
-		helpers.notAllowed(app.req, app.res, function(error){
-			if (error) return next(err);
-		});
+	console.log("==================================");
+	console.log(" Plugin Private Forum Initialized ");
+	console.log("==================================");
+	
+	if (allowedPages.indexOf(req.url) < 0) {
+		helpers.notAllowed(req, res, next);
+	} else {
+		console.log("PLUGIN PRIVATE FORUM: req.url="+req.url+", user is logged");
+		winston.log("PLUGIN PRIVATE FORUM: req.url="+req.url+", user is logged");
+		next();
 	}
-	next();
 };
 
 module.exports = plugin;
