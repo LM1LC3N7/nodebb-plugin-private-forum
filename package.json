@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-private-forum",
-  "version": "1.0.0b",
+  "version": "1.0.1b",
   "description": "A NodeBB plugin to lockdown the forum to non-registered users.",
   "main": "library.js",
   "repository": {
