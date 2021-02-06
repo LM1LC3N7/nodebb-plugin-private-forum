@@ -9,7 +9,7 @@ plugin.init = function (params, callback) {
 	const { app, middleware, router } = params;
 	let allowedPages = /\/(assets\/|login|register|reset|plugins\/).*|.*(.css|.js)$/;
 	
-	app.use(function (req, res, next) {
+	router.use(function (req, res, next) {
 		if ((allowedPages.test(req.url)) || (req.url === "/") || (req.uid > 0)) {
 			winston.verbose("[plugin-nodebb-private-forum] User is logged or URL is allowed ("+ req.url +"), no redirect.");
 			next();
