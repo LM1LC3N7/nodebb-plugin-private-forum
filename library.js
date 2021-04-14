@@ -5,7 +5,7 @@ const helpers = require.main.require('./src/controllers/helpers');
 plugin.init = async (params, callback) => {
 
         const { app, middleware, router } = params;
-        let allowedPages = /\/(assets\/|login|register|reset|plugins\/).*|.*(.css|.js)$/;
+        let allowedPages = /\/(assets\/|login|register|reset|auth|plugins\/).*|.*(.css|.js)$/;
 
         router.use(function (req, res, next) {
                 if (req.loggedIn || allowedPages.test(req.url)) {
