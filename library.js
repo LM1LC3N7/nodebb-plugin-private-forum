@@ -11,9 +11,10 @@ plugin.init = async (params, callback) => {
                 if (req.loggedIn || allowedPages.test(req.url)) {
                         winston.verbose("[plugin-nodebb-private-forum] User is logged or URL is allowed ("+ req.url +"), no redirect.");
                         return next();
+                } else {
+                        winston.verbose("[plugin-nodebb-private-forum] User is not logged and URL is not allowed ("+ req.url +"), redirecting to login page.");
+                        return helpers.notAllowed(req, res, next);
                 }
-                winston.verbose("[plugin-nodebb-private-forum] User is not logged and URL is not allowed ("+ req.url +"), redirecting to login page.");
-                return helpers.notAllowed(req, res, next);
         });
 };
 
