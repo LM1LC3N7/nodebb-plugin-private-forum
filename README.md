@@ -10,8 +10,10 @@ Be aware:
 ## Bug or feature request
 Please open an issue or a pull request if needed.
 
-## Roadmap
+## Old Roadmap ideas
 - Implement an admin view to add and remove exception pages
+
+Note: I finally found discourse as a better solution to suite my needs. As a results there is no active dev on this project, but pull requests are welcome!
 
 ## Installation
 
