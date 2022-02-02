@@ -1,3 +1,5 @@
+**Note: I finally found discourse as a better solution to suite my needs. As a results there is no active dev on this project, but pull requests are welcome!**
+
 # Private Forum Plugin for NodeBB
 
 This module allows to lock the forum to anyone that did not have an account.
