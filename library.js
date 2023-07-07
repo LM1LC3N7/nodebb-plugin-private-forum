@@ -6,7 +6,7 @@ plugin.privateforum = async (data, callback) => {
       
         var req = data.req;
         var res = data.res;
-        let allowedPages = /\/(assets\/|login|register|reset|auth|plugins\/).*|.*(.css|.js)$/;
+        let allowedPages = /\/(assets\/|login|logout|register|reset|auth|plugins\/).*|.*(.css|.js)$/;
 
         if (req.loggedIn || allowedPages.test(req.url)) {
                 winston.verbose("[plugin-nodebb-private-forum] User is logged or URL is allowed ("+ req.url +"), no redirect.");
